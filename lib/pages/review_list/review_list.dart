@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:food_review/helper/clippers.dart';
 
 class ReviewList extends StatefulWidget {
-  const ReviewList({Key? key}) : super(key: key);
+  const ReviewList({super.key});
   static const String route = '/review_list';
   @override
   State<ReviewList> createState() => _ReviewListState();
@@ -10,6 +11,28 @@ class ReviewList extends StatefulWidget {
 class _ReviewListState extends State<ReviewList> {
   @override
   Widget build(BuildContext context) {
-    return const Text('hi');
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Food Reviews'),
+        backgroundColor: Colors.transparent,
+        elevation: 2.0,
+        flexibleSpace: ClipPath(
+          clipper: OvalClipperUpper(),
+          child: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  Theme.of(context).colorScheme.primary,
+                  Theme.of(context).colorScheme.secondaryContainer,
+                ],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              )
+            ),
+          )
+        ),
+      ),
+      extendBodyBehindAppBar: true, // To keep clipped are Transparent
+    );
   }
 }
