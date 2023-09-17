@@ -61,10 +61,10 @@ class _HomeState extends State<Home> {
                   labelType: NavigationRailLabelType.all,
                   leading: Padding(
                     padding: const EdgeInsets.only(bottom: 24.0),
-                    child: Icon(Icons.emoji_emotions)/*Image.asset('assets/images/poop.png',
+                    child: Image.asset('assets/images/chat.png',
                       width: 48.0,
                       fit: BoxFit.cover
-                    ),*/
+                    ),
                   ),
                   destinations: const [
                     NavigationRailDestination(icon: Icon(Icons.reviews),label:Text('reviews')),
