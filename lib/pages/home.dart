@@ -25,6 +25,9 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return ResponsiveLayoutBuilder(
         mobile: Scaffold(
+          appBar: AppBar(
+            title: Text('Welcome to Reviews'),
+          ),
           body: _bodySelectedPage[_currentPageIndex],
           bottomNavigationBar: NavigationBar(
             destinations: const[
@@ -41,6 +44,7 @@ class _HomeState extends State<Home> {
           ),
         ),
         webDesktopTablet: Scaffold(
+          ///appBar: Text('sex'),
           body: Row(
             children: [
               Container(
